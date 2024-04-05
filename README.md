@@ -79,6 +79,24 @@ pip install -e .
   We use the following Dataset prepared by the amazing folks at [Beijing Academy of Artificial Intelligence](https://huggingface.co/BAAI)
   The dataset is available [here](https://www.modelscope.cn/datasets/BoyaWu10/Bunny-v1.0-data).
 
+  Pretrain Dataset format:
+  ```
+  {
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image>\nProvide a brief description of the given image."
+            },
+            {
+                "from": "gpt",
+                "value": "A set of three chrome and bubble glass table lamp bases. H.50cm - Image 4 of 10"
+            }
+        ],
+        "id": "0006418798",
+        "image": "0006418798.jpg"
+    },
+  ```
+
 * Run
 
   Update `--model_name_or_path` and `--vision_tower` to the paths of the LLM and vision encoder, respectively. Update `MODEL_TYPE` and `OUTPUT_DIR` accordingly.
