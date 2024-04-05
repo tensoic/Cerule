@@ -145,7 +145,13 @@ We sincerely thank the Amazing teams at Google, LLaVA, and BAAI without which th
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=tensoic/Cerule&type=Date)](https://star-history.com/#tensoic/Cerule&Date)
+<a href="https://star-history.com/#tensoic/Cerule&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=tensoic/Cerule&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=tensoic/Cerule&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=tensoic/Cerule&type=Date" />
+ </picture>
+</a>
 
 
 
