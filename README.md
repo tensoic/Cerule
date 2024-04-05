@@ -143,6 +143,10 @@ Unless you explicitly state otherwise, any contribution intentionally submitted 
 ## Acknowledgements
 We sincerely thank the Amazing teams at Google, LLaVA, and BAAI without which this project would not have been possible!
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=tensoic/Cerule&type=Date)](https://star-history.com/#tensoic/Cerule&Date)
+
 
 
 
