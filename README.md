@@ -129,7 +129,7 @@ pip install -e .
 #### For a CLI based inference:
 ```
 python3 -m cerule.serve.cli \
-	--model-path /path/to/cerule/model \
+	--model-path Tensoic/Cerule-v0.1 \ 
 	--image-file examples/astronaut.png
 ```
 
