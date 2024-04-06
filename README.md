@@ -130,7 +130,6 @@ pip install -e .
 ```
 python3 -m cerule.serve.cli \
 	--model-path /path/to/cerule/model \
-	--model-type gemma \
 	--image-file examples/astronaut.png
 ```
 
