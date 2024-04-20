@@ -2,9 +2,7 @@ from typing import List, Optional, Tuple, Union
 
 import torch
 import torch.nn as nn
-from transformers import AutoConfig, AutoModelForCausalLM
-
-from .gemma import GemmaModel, GemmaConfig, GemmaForCausalLM
+from transformers import AutoConfig, AutoModelForCausalLM, GemmaConfig, GemmaModel, GemmaForCausalLM
 
 from transformers.modeling_outputs import CausalLMOutputWithPast
 
