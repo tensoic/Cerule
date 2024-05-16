@@ -159,6 +159,9 @@ def preprocess(
         tokenizer: transformers.PreTrainedTokenizer,
         has_image: bool = False
 ) -> Dict:
+    if conversation_lib.default_conversation.sep_style == conversation_lib.SeparatorStyle.PLAIN:
+        return preprocess_plain(sources, tokenizer)
+    
     if conversation_lib.default_conversation.sep_style == conversation_lib.SeparatorStyle.GEMMA:
         return preprocess_gemma(sources, tokenizer, has_image=has_image)
     
