@@ -13,6 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Imported from Huggingface Transformers - transformers.models.gemma
+
 """Tokenization classes for Gemma."""
 
 import os
