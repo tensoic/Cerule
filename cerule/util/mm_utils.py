@@ -3,7 +3,7 @@ import torch
 from PIL import Image
 from io import BytesIO
 from transformers import StoppingCriteria
-from bunny.constants import IMAGE_TOKEN_INDEX
+from cerule.constants import IMAGE_TOKEN_INDEX
 
 
 def load_image_from_base64(image):
