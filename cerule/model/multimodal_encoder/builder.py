@@ -9,6 +9,6 @@ def build_vision_tower(vision_tower_cfg, **kwargs):
         if use_s2:
             return SiglipVisionTowerS2(vision_tower, args=vision_tower_cfg, **kwargs)
         else:
-            return SigLipVisionTower(vision_tower, args=vision_tower_cfg, **kwargs)
+            return SiglipVisionTower(vision_tower, args=vision_tower_cfg, **kwargs)
     else:
         raise ValueError(f'Unknown vision tower: {vision_tower}')
