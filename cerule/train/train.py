@@ -186,7 +186,7 @@ def safe_save_model_for_hf_trainer(trainer: transformers.Trainer,
         trainer._save(output_dir, state_dict=cpu_state_dict)  # noqa
 
 
-def train(attn_implementation=None):
+def train():
     global local_rank
 
     parser = transformers.HfArgumentParser((ModelArguments, DataArguments, TrainingArguments))
@@ -383,4 +383,4 @@ def train(attn_implementation=None):
 
 
 if __name__ == "__main__":
-    train()
+    train(attn_implementation="flash_attention_2")
