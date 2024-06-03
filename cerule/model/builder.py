@@ -10,7 +10,7 @@ from cerule.model import *
 # can add more models. just load, as done below for gemma
 
 def load_pretrained_model(model_path, model_base, model_name, model_type, load_8bit=False, load_4bit=False,
-                          device_map="auto", device="cuda", **kwargs):
+                          device_map="auto", device="cuda", use_flash_attn=False, **kwargs):
     if model_type not in {'gemma'}: 
         raise ValueError(f"Unknown Model Type {model_type}")
 
