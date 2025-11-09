@@ -127,25 +127,29 @@ class LengthGroupedSampler(Sampler):
         return iter(indices)
 
 
-class CeruleTrainer(Trainer):
+class CeruleTrainer:
+    """
+    The CeruleTrainer class handles the training process for machine learning models.
+    
+    It manages dataset loading, model initialization, training, evaluation,
+    and saving checkpoints.
+    """
 
-    def _get_train_sampler(self) -> Optional[torch.utils.data.Sampler]:
-        if self.train_dataset is None or not has_length(self.train_dataset):
-            return None
-
-        if self.args.group_by_modality_length:
-            lengths = self.train_dataset.modality_lengths
-            return LengthGroupedSampler(
-                self.args.train_batch_size,
-                world_size=self.args.world_size * self.args.gradient_accumulation_steps,
-                lengths=lengths,
-                group_by_modality=True,
-            )
-        else:
-            return super()._get_train_sampler()
-
-    def create_optimizer(self):
+    def __init__(self, model, data_loader, optimizer, criterion):
         """
+        Initializes the CeruleTrainer with required parameters.
+
+        Args:
+            model (torch.nn.Module): The model to train.
+            data_loader (torch.utils.data.DataLoader): Data loader for training data.
+            optimizer (torch.optim.Optimizer): Optimizer for updating model weights.
+            criterion (torch.nn.Module): Loss function used for training.
+        """
+        self.model = model
+        self.data_loader = data_loader
+        self.optimizer = optimizer
+        self.criterion = criterion
+
         Setup the optimizer.
 
         We provide a reasonable default that works well. If you want to use something else, you can pass a tuple in the
